@@ -20,6 +20,7 @@ public class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
+        this.pack();
         this.setLocationRelativeTo(null);
         at.Leer();
         for (Personas u : at.getLista()) {
@@ -147,6 +148,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        TextArea.setEditable(false);
         TextArea.setColumns(20);
         TextArea.setRows(5);
         jScrollPane3.setViewportView(TextArea);
@@ -178,16 +180,17 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PrincipalLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69))
                     .addGroup(PrincipalLayout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                        .addGap(34, 34, 34)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -221,50 +224,41 @@ public class Login extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(48, 48, 48)
-                                .addComponent(L_passs, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))
-                        .addGap(93, 93, 93))))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(172, Short.MAX_VALUE)
-                    .addComponent(L_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(92, 92, 92)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(L_passs)
+                                    .addComponent(L_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(L_passs, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
+                .addGap(61, 61, 61)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(L_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
+                        .addComponent(L_passs, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2))
+                .addGap(36, 36, 36)
                 .addComponent(jButton2)
-                .addGap(43, 43, 43))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(97, 97, 97)
-                    .addComponent(L_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(166, Short.MAX_VALUE)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
@@ -282,15 +276,15 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Este nombre de usuario ya esta ocupado");
             R_usu.setText("");
         } else {
-            String[] aux2= R_cumple.getText().split(",");
-           String aux3="";
+            String[] aux2 = R_cumple.getText().split(",");
+            String aux3 = "";
             for (int i = 0; i < aux2[2].length(); i++) {
-               if(i>0){
-                  aux3+= aux2[2].charAt(i);
-               }
+                if (i > 0) {
+                    aux3 += aux2[2].charAt(i);
+                }
             }
-            int R_edad=2020-Integer.parseInt(aux3);
-            if ( R_edad < 14) {
+            int R_edad = 2020 - Integer.parseInt(aux3);
+            if (R_edad < 14) {
                 JOptionPane.showMessageDialog(this, "Tiene que tener mas de 13 años ");
                 R_usu.setText("");
                 R_Contra.setText("");
@@ -298,12 +292,12 @@ public class Login extends javax.swing.JFrame {
             } else {
                 try {
                     JOptionPane.showMessageDialog(this, "Se registro con exito");
-                    Personas p = new Personas(R_name.getText(), R_usu.getText(),R_Contra.getText(), R_cumple.getText(),  R_edad);
+                    Personas p = new Personas(R_name.getText(), R_usu.getText(), R_Contra.getText(), R_cumple.getText(), R_edad);
                     contactos.add(p);
                     at.Leer();
                     at.setPersona(p);
                     at.Escribir();
-                    
+
                     this.pack();
                     this.setLocationRelativeTo(Registrarse);
                     Registrarse.setVisible(false);
@@ -328,7 +322,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int p = 0;
-        int cont=0;
+        int cont = 0;
         for (Personas i : contactos) {
             if (i.getUsuario().equals(L_usuario.getText()) && i.getContra().equals(L_passs.getText())) {
                 p = 1;
@@ -336,14 +330,14 @@ public class Login extends javax.swing.JFrame {
                 Principal.setLocationRelativeTo(this);
                 this.setVisible(false);
                 Principal.setVisible(true);
-                posi=cont;
-                 DefaultListModel modelo= (DefaultListModel) Contactos.getModel();
-                 for (Personas u : contactos) {
+                posi = cont;
+                DefaultListModel modelo = (DefaultListModel) Contactos.getModel();
+                for (Personas u : contactos) {
                     modelo.addElement(u);
                 }
-                  Contactos.setModel(modelo);
-                  llenar();
-                  break;
+                Contactos.setModel(modelo);
+                llenar();
+                break;
             }
             cont++;
         }
@@ -354,33 +348,199 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try {
-            String coment= contactos.get(posi).getUsuario()+": "+Comentario.getText();
-           
-      TextArea.append(coment);
-            if (coment.charAt(coment.length()-1) ==1){
-                System.out.println("holi");
+            coment = Comentario.getText();
+            System.out.println(coment.charAt(coment.length() - 1));
+            if (coment.charAt(coment.length() - 1) == '1') {
+                cifra = 1;
+            } else if (coment.charAt(coment.length() - 1) == '2') {
+                System.out.println("hds");
+                cifra = 2;
+            } else if (coment.charAt(coment.length() - 1) == '3') {
+                cifra = 3;
+            } else {
+                if (coment.charAt(coment.length() - 1) == 'W') {
+                    if (coment.charAt(coment.length() - 2) == 'Y') {
+                        if (coment.charAt(coment.length() - 3) == 'E') {
+                            if (coment.charAt(coment.length() - 4) == 'K') {
+                                if (coment.charAt(coment.length() - 5) == ' ') {
+                                    if (coment.charAt(coment.length() - 6) == '4') {
+                                        cifra = 4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            System.out.println(coment);
+            String p = cifrado(coment);
+            String mensaje = " Mensaje: " + coment;
+            String listoo = contactos.get(posi).getUsuario() + ": " + mensaje + " Cifrado: " + p;
+            TextArea.append(listoo + "\n");
             UConvers.Leer();
             UConvers.setPersona(coment);
             UConvers.Escribir();
             Comentario.setText("");
         } catch (Exception ex) {
-        ex.printStackTrace();
-        }        
+            ex.printStackTrace();
+        }
+        
     }//GEN-LAST:event_jButton4ActionPerformed
+    String coment;
+    public void llenar() {
+        String u = "";
+        for (String t : publicaciones) {
+            u += (t + "\n");
+        }
+        TextArea.setText(u);
+    }
 
-   public void llenar(){
-       String u="";
-       for (String t : publicaciones) {
-           u+=(t+"\n");
-       }
-       TextArea.setText(u);
-   }
-   
-   
-   
-    
+    public String cifrado(String coment) {
+        switch (cifra) {
+            case 1:
+                cifradoo = primero(coment);
+                break;
+            case 2:
+                cifradoo=segundo(coment);
+                break;
+            case 3:
+                cifradoo=tercero(coment);
+                break;
+            case 4:
+                cifradoo = Cuatro(coment);
+                break;
+            default:
+                JOptionPane.showMessageDialog(this, "No tiene ningun cifrado");
+                break;
+        }
+        return cifradoo;
+    }
+
+    public String segundo(String mensaje) {
+        String aux="";
+        for (int i = 0; i < mensaje.length()-2; i++) {
+            aux+=mensaje.charAt(i);
+        }
+        String texto = "";
+        int aux1;
+        char letra;
+        for (int j = 0; j < aux.length(); j++) {
+            if (aux.charAt(j) != ' ') {
+                letra = aux.charAt(j);
+                aux1 = letra;
+                texto += aux1;
+               
+            } else {
+                texto += ' '; 
+            }
+        }
+        return texto;
+    }
+
+   public String tercero(String mensaje) {
+       
+        String texto = "";
+        char c;
+        String[] tokens = mensaje.split(" ");
+        for (int i = 0; i < tokens.length; i++) {
+            for (int j = 0; j < tokens[i].length(); j++) {
+                int posi;
+                int restas;
+                int d = 0;
+                 if (tokens[i].charAt(j) >= 65 && tokens[i].charAt(j) <= 90) {
+                    int letra = tokens[i].charAt(j);
+                    posi = letra - 65;
+                    restas = 25 - posi;
+                    d = 65 + restas;
+                } else if (tokens[i].charAt(j) >= 97 && tokens[i].charAt(j) <= 122) {
+                    int letra = tokens[i].charAt(j);
+                    posi = letra - 97;
+                    restas = 25 - posi;
+                    d = 97 + restas;
+
+                }
+                texto += (char) d;
+
+            }
+            texto += " ";
+
+        }
+        return texto;
+
+    }
+
+    public String Cuatro(String texto) {
+        int cont1 = 0, cont2 = 1, cont3 = 2, cont4 = 3;
+        String aqui = "";
+        for (int i = 0; i < texto.length() - 6; i++) {
+            if (texto.charAt(i) != ' ') {
+                aqui += texto.charAt(i);
+            }
+        }
+        for (int i = 0; i < aqui.length(); i++) {
+            if (i == cont1) {
+                K.add(aqui.charAt(i));
+                cont1 += 4;
+            } else if (i == cont2) {
+                E.add(aqui.charAt(i));
+                cont2 += 4;
+            } else if (i == cont3) {
+                Y.add(aqui.charAt(i));
+                cont3 += 4;
+            } else if (i == cont4) {
+                W.add(aqui.charAt(i));
+                cont4 += 4;
+            }
+        }
+        String listo = "";
+        for (Character o : E) {
+            listo += o;
+        }
+        for (Character o : K) {
+            listo += o;
+        }
+        for (Character o : W) {
+            listo += o;
+        }
+        for (Character o : Y) {
+            listo += o;
+        }
+        String i = listo.toUpperCase();
+        return i;
+    }
+
+    public static String primero(String l) {
+       String texto="";
+        for (int i = 0; i < l.length()-2; i++) {
+            texto+=l.charAt(i);
+        }
+        texto = texto.toLowerCase();
+        String[] tokens = texto.split(" ");
+        String t, p1, rt, aux, mensaje = "";
+        String vocales = "aeiou";
+        for (int i = 0; i < tokens.length; i++) {
+            t = tokens[i];
+            int index = 0;
+            char[] characters = t.toCharArray();
+
+            for (int j = 0; j < characters.length; j++) {
+                char character = characters[j];
+                if (vocales.indexOf(character) != -1) {
+                    index = vocales.indexOf(character);
+                }
+            }
+            if (t.length() <= 3) {
+                aux = t.concat("way");
+                mensaje += aux + " ";
+            } else {
+                p1 = t.substring(0, index + 1);
+                rt = t.substring(index);
+                aux = rt + p1 + "ay";
+                mensaje += aux + " ";
+            }
+        }
+        return mensaje;
+    }
+
     public static void main(String args[]) {
 
         try {
@@ -439,7 +599,13 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     ArrayList<Personas> contactos = new ArrayList();
     ArrayList<String> publicaciones = new ArrayList();
-    ArchivosTexto at=new ArchivosTexto("./Users.txt",contactos);
-    ArchivoConversacion UConvers=new ArchivoConversacion("./Conversaciones.txt",publicaciones);
-    int posi;
+    ArchivosTexto at = new ArchivosTexto("./Users.txt", contactos);
+    ArchivoConversacion UConvers = new ArchivoConversacion("./Conversaciones.txt", publicaciones);
+    int posi, cifra;
+    String cifradoo = "";
+    ArrayList<Character> K = new ArrayList();
+    ArrayList<Character> E = new ArrayList();
+    ArrayList<Character> Y = new ArrayList();
+    ArrayList<Character> W = new ArrayList();
+
 }
